@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b71cb900fa9dec5488df2deb180db58f, type: 3}
-  m_Name: Regal_MixedRealityInputSystemProfile
+  m_Name: Regal_MR_InputSystemProfile
   m_EditorClassIdentifier: 
   isCustomProfile: 1
   dataProviderConfigurations:
@@ -95,12 +95,12 @@ MonoBehaviour:
     runtimePlatform: 33
     deviceManagerProfile: {fileID: 11400000, guid: 8f48cb9c26fb518499c65c9f9e8bb4ed, type: 2}
   - componentType:
-      reference: Microsoft.MixedReality.Toolkit.XRSDK.Oculus.Input.OculusXRSDKDeviceManager,
-        Microsoft.MixedReality.Toolkit.Providers.XRSDK.Oculus
-    componentName: XR SDK Oculus Device Manager
+      reference: Microsoft.MixedReality.Toolkit.XRSDK.OpenXR.OpenXRDeviceManager,
+        Microsoft.MixedReality.Toolkit.Providers.OpenXR
+    componentName: OpenXR XRSDK Device Manager
     priority: 0
-    runtimePlatform: 33
-    deviceManagerProfile: {fileID: 11400000, guid: 7ae8b2f2519126e4b9e50be2d378cc40, type: 2}
+    runtimePlatform: -1
+    deviceManagerProfile: {fileID: 0}
   focusProviderType:
     reference: Microsoft.MixedReality.Toolkit.Input.FocusProvider, Microsoft.MixedReality.Toolkit.Services.InputSystem
   raycastProviderType:
@@ -110,10 +110,10 @@ MonoBehaviour:
   focusIndividualCompoundCollider: 0
   inputActionsProfile: {fileID: 11400000, guid: 723eb97b02944311b92861f473eee53e, type: 2}
   inputActionRulesProfile: {fileID: 11400000, guid: 03945385d89102f41855bc8f5116b199, type: 2}
-  pointerProfile: {fileID: 11400000, guid: 5def7b7318f0d054689236e16f38d412, type: 2}
+  pointerProfile: {fileID: 11400000, guid: 48aa63a9725047b28d4137fd0834bc31, type: 2}
   gesturesProfile: {fileID: 11400000, guid: bd7829a9b29409045a745b5a18299291, type: 2}
   speechCommandsProfile: {fileID: 11400000, guid: e8d0393e66374dae9646851a57dc6bc1, type: 2}
   enableControllerMapping: 1
   controllerMappingProfile: {fileID: 11400000, guid: 39ded1fd0711a0c448413d0e1ec4f7f3, type: 2}
   controllerVisualizationProfile: {fileID: 11400000, guid: 345c06fdf3732db46b96299bd3cba653, type: 2}
-  handTrackingProfile: {fileID: 11400000, guid: 8bbe358276f693043880ea46a63e0194, type: 2}
+  handTrackingProfile: {fileID: 11400000, guid: 35164dfa4988e564397619881d0aa87a, type: 2}
