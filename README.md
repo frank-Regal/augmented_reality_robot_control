@@ -2,6 +2,8 @@
 ### About
 HoloLens 2 augmented reality application to remotely teleop a Baxter dual arm robot.
 
+![Baxter in Augmented Reality](media/cover_photo.jpg? "Baxter in Augmented Reality")
+
 ### Branch Descriptions
 - ```main``` - stable build
 - ```devel``` - development branch. Working daily on this project, devel is not garenteed to build.
