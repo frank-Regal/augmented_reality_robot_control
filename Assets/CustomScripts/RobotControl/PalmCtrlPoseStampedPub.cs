@@ -25,17 +25,15 @@ namespace RosSharp.RosBridgeClient
         MessageTypes.Geometry.PoseStamped msg;         // ROS topic message type
         RosConnector msg_comp;                         // ROS message component
         string publicationId;                          // Name of publisher
-        MixedRealityPose index_pose;                   // Init output of MRTK utility functions
-        MixedRealityPose thumb_pose;                   // Init output of MRTK utility functions
-        float pinch_value;                             // Value used to determine if robot is grabbed
+        MixedRealityPose palm_pose;                   // Init output of MRTK utility functions
         Transform robot_tf;                            // Private baxter_body_frame
         Vector3 finger_pose_wrt_robot =                // Left hand index finger tip position
             new Vector3(0, 0, 0);
         Quaternion finger_rot_wrt_robot =              // Left hand index finger tip rotation
             new Quaternion(0, 0, 0, 0);
-        Vector3 index_tip_position =                   // Left hand index finger tip position
+        Vector3 palm_position =                   // Left hand index finger tip position
             new Vector3(0, 0, 0);
-        Quaternion index_tip_rotation =                // Left hand index finger tip rotation
+        Quaternion palm_rotation =                // Left hand index finger tip rotation
             new Quaternion(0, 0, 0, 0);
         MessageTypes.Geometry.Point geo_point =        // ROS GeoPoint Msg
             new MessageTypes.Geometry.Point();
@@ -110,40 +108,35 @@ namespace RosSharp.RosBridgeClient
         private void PublishPoseStamped()
         {
             // Check if hands are being tracked, if not do nothing
-            if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Hand, out index_pose) &&
-                HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbTip, Hand, out thumb_pose))
+            if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Hand, out palm_pose))
             {
                 // Make a copy from MRTK Vector3 to Unity Vector3 (not Ideal)
-                index_tip_position = index_pose.Position;
-                index_tip_rotation = index_pose.Rotation;
-
-                // Calculate whether or not index and thumb are pinching
-                pinch_value = CalculateIndexPinch(index_pose, thumb_pose);
+                palm_position = palm_pose.Position;
+                palm_rotation = palm_pose.Rotation;
 
                 // Debug
                 //Debug.Log(Hand.ToString() + " Hand Pinch Value: " + pinch_value);
 
                 // If hand is pinching calculate transform and publish pose stamped
                 // msg of index finger wrt to robot body frame
-                if (pinch_value >= 0.89f) // hand is pinching
-                {
-                    // Get body frame transformation of robot
-                    robot_tf = RobotBodyFrame.transform;
+                
+                // Get body frame transformation of robot
+                robot_tf = RobotBodyFrame.transform;
 
-                    // Transform finger tip position into robot ref frame
-                    index_tip_position = robot_tf.InverseTransformPoint(index_tip_position);
+                // Transform finger tip position into robot ref frame
+                palm_position = robot_tf.InverseTransformPoint(palm_position);
 
-                    // Fill ROS msg
-                    msg.header.Update();
-                    msg.pose.position = GetGeometryPoint(index_tip_position.Unity2Ros());
-                    msg.pose.orientation = GetGeometryQuaternion(index_tip_rotation.Unity2Ros());
+                // Fill ROS msg
+                msg.header.Update();
+                msg.pose.position = GetGeometryPoint(palm_position.Unity2Ros());
+                msg.pose.orientation = GetGeometryQuaternion(palm_rotation.Unity2Ros());
 
-                    // Send ROS PoseStamped msg
-                    msg_comp.RosSocket.Publish(publicationId, msg);
+                // Send ROS PoseStamped msg
+                msg_comp.RosSocket.Publish(publicationId, msg);
 
-                    // Debug
-                    //Debug.Log(Hand.ToString() + " Hand PoseStamped Message Published");
-                }
+                // Debug
+                Debug.Log(Hand.ToString() + " Hand PoseStamped Message Published");
+                
             }
         }
 
