@@ -2,6 +2,10 @@
 ### About
 HoloLens 2 augmented reality application to remotely teleop a Baxter dual arm robot.
 
+![Baxter in Augmented Reality](media/cover_photo.jpg? "Baxter in Augmented Reality")
+
+This repo is for the Augmented Reality application only. The code needed to control Baxter on an Ubuntu machine can be found here: [GitHub - anlyoung/kaeri_teleop](https://github.com/anlyoung/kaeri_teleop 'https://github.com/anlyoung/kaeri_teleop')
+
 ### Branch Descriptions
 - ```main``` - stable build
 - ```devel``` - development branch. Working daily on this project, devel is not garenteed to build.
