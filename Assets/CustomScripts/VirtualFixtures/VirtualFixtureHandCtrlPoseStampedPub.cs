@@ -21,15 +21,14 @@ namespace RosSharp.RosBridgeClient
         /****************************************************
          * Initialize Variables
          */
+        public GameObject CylinderObject;
 
         protected bool IsVirtualFixtureInScene = false;  // Boolean check to enable or disable virtual fixture logic
         protected bool ContactMade = false;              // Contact is made
         protected Vector3 VirtualFixtureLocation =       // Virtual fixture location
            new Vector3(0, 0, 0);
-
-
-
         
+
 
         /****************************************************
          * Delegate handlers and functions
@@ -90,6 +89,10 @@ namespace RosSharp.RosBridgeClient
                 new_eof_position = robot_tf.InverseTransformPoint(index_tip_position);
             }
         }
+
+        /****************************************************
+         * Publish PoseStamped messages
+         */
 
         protected override void PublishPoseStamped()
         {

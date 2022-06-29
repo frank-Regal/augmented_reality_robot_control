@@ -51,21 +51,27 @@ public class MeshNormalTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // obtain the normals from the Mesh
+        // obtain object components
         mesh = MeshObject.GetComponent<MeshFilter>().mesh;
-        vertices = mesh.vertices;
         mesh_rot = MeshObject.GetComponent<Transform>().rotation;
-        normals = mesh.normals;
         Tow = MeshObject.GetComponent<Transform>().transform.localToWorldMatrix;
+        
+        // get all vertix locations of the mesh
+        vertices = mesh.vertices;
+
+        // get all normal vector of the mesh at the vertex locations
+        normals = mesh.normals;
         
         // Fill Rotation Matrix with Object Rotation
         for (int k = 0; k < 3; k++){
             for (int w = 0; w < 3; w++)
             {
+                // Assign rotation part of the transformation matrix to the transformation vertex holder
                 T_vertice[k, w] = Tow[k, w];
             }
         }
         
+        // Loop through all the normal vectors
         for (int i = 0; i < normals.Length; i++)
         {
             // Rotate and Translate each vertex of the mesh of the object
