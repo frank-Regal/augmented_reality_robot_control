@@ -16,7 +16,7 @@ public class CylinderVirtualFixture : BaseVirtualFixture
     {
         IsVfBeingTouched = GetInteractionStatus();
         ChangeMaterialOnContact(IsVfBeingTouched);
-        //GetNormalVectorAtContactPoint(IsVfBeingTouched, ref normal_vector);
+        GetNormalVectorAtContactPoint(IsVfBeingTouched, ref normal_vector);
 
     }
 }

@@ -111,6 +111,7 @@ public class BaseVirtualFixture : MonoBehaviour
         return IsObjectInteracting;
     }
 
+    // call from child class in update function
     protected void ChangeMaterialOnContact(in bool IsInteracting)
     {
         // Assign appropriate material
@@ -138,7 +139,7 @@ public class BaseVirtualFixture : MonoBehaviour
         }
         else
         {
-            //GameObject.Find("NormalVisualiztion").SetActive(false);
+            
         }
     }
 
@@ -189,9 +190,17 @@ public class BaseVirtualFixture : MonoBehaviour
             tf_normal[i, 3] = closest_vf_point[i];
         }
 
+        // Scale Normal Vector
+        normal_vector = normal_vector.normalized;
+        //Debug.Log(normal_vector);
+
         // Rotate and translate normal vector
-        normal_vector = tf_normal.MultiplyPoint3x4(normal_vector.normalized);
+        normal_vector = tf_normal.MultiplyPoint3x4(normal_vector);
+
         NormalVectorObject.SetActive(true);
+
+        //Vector3 newDirection = Vector3.RotateTowards(normal_vector_new, normal_vector, 3, 0.0f);
+        //Debug.DrawRay(closest_vf_point, mesh_rotation.eulerAngles, Color.red);
         Instantiate(NormalVectorObject, normal_vector, mesh_rotation);
     }
 
