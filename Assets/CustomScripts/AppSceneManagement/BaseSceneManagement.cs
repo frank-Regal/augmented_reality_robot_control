@@ -30,4 +30,12 @@ public class BaseSceneManagement : MonoBehaviour
         // section under File -> Build Settings.
         SceneManager.LoadScene(2);
     }
+
+    public void StartKinova()
+    {
+        // Index '1' is linked to the Scenes/MainScene in the "Scenes in Build"
+        // section under File -> Build Settings.
+        SceneManager.LoadScene(3);
+    }
+
 }

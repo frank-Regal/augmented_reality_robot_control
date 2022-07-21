@@ -86,6 +86,7 @@ public class MeshNormalTest : MonoBehaviour
             // Rotate and Translate the normal vectors founds at each vertex
             normals[i] = T_vertice.MultiplyPoint3x4(normals[i].normalized);
 
+            NormalVectorObject.SetActive(true);
             // Create new objects
             Instantiate(NormalVectorObject, vertices[i], mesh_rot);
             Instantiate(NormalVectorObject, normals[i], mesh_rot);

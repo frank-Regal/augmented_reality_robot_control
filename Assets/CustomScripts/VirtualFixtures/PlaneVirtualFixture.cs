@@ -10,7 +10,8 @@ public class PlaneVirtualFixture : BaseVirtualFixture
     private void Update()
     {
         IsVfBeingTouched = GetInteractionStatus();
-        ChangeMaterialOnContact(IsVfBeingTouched);
+        //ChangeMaterialOnContact(IsVfBeingTouched);
+        HoldInteractionStatus(IsVfBeingTouched);
         GetNormalVectorAtContactPoint(IsVfBeingTouched, ref normal_vector);
 
     }

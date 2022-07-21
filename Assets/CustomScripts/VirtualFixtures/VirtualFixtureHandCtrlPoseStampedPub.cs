@@ -1,13 +1,13 @@
 using System;
+using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 
 using Microsoft;
+using Microsoft.MixedReality.Toolkit.UI;
 using Microsoft.MixedReality.Toolkit.Input;
 using Microsoft.MixedReality.Toolkit.Utilities;
-using Microsoft.MixedReality.Toolkit.UI;
 
 using RosSharp.RosBridgeClient;
 
@@ -21,14 +21,14 @@ namespace RosSharp.RosBridgeClient
         /****************************************************
          * Initialize Variables
          */
-        public GameObject CylinderObject;
+
+        public GameObject CylinderObject;                // Snap Object
 
         protected bool IsVirtualFixtureInScene = false;  // Boolean check to enable or disable virtual fixture logic
         protected bool ContactMade = false;              // Contact is made
         protected Vector3 VirtualFixtureLocation =       // Virtual fixture location
            new Vector3(0, 0, 0);
         
-
 
         /****************************************************
          * Delegate handlers and functions
