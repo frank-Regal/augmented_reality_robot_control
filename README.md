@@ -8,10 +8,10 @@ Currently Supported Arms:
 
 ##### Note: This is an updated repo based on [GitHub - frank-Regal/baxter_ar_teleop](https://github.com/frank-Regal/baxter_ar_teleop.git 'https://github.com/frank-Regal/baxter_ar_teleop.git') with the intention to be a modular version that can support more robotic arms.
 
-<img src="media/cover_photo.jpg" alt="drawing" width="700"/>
+<img src="media/kinova_ar_teleop.png" alt="drawing" width="500"/> <img src="media/cover_photo.jpg" alt="drawing" width="500"/>
+
 
 ### Branch Descriptions
-- ```main``` - stable build
 - ```devel``` - development branch. Working daily on this project, devel is not garenteed to build.
 
 
