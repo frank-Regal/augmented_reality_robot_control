@@ -8,7 +8,7 @@ Currently Supported Arms:
 
 ##### Note: This is an updated repo based on [GitHub - frank-Regal/baxter_ar_teleop](https://github.com/frank-Regal/baxter_ar_teleop.git 'https://github.com/frank-Regal/baxter_ar_teleop.git') with the intention to be a modular version that can support more robotic arms.
 
-![Baxter in Augmented Reality](media/cover_photo.jpg? "Baxter in Augmented Reality")
+<img src="media/cover_photo.jpg" alt="drawing" width="700"/>
 
 ### Branch Descriptions
 - ```main``` - stable build
