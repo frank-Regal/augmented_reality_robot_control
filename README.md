@@ -1,6 +1,9 @@
-# Baxter AR Teloperation Application
+# Augmented Reality Robot Control
 ### About
-HoloLens 2 augmented reality application to remotely teleop a Baxter dual arm robot.
+HoloLens 2 augmented reality application to remotely teleop multiple robotic arms. 
+Current Arms Supported:
+- ReThink Robotics Baxter Dual Arm
+- Kinova Robotics Gen3 7DOF Dual Arm Setup
 
 ![Baxter in Augmented Reality](media/cover_photo.jpg? "Baxter in Augmented Reality")
 
