@@ -1,13 +1,14 @@
 # Augmented Reality Robot Control
 ### About
-HoloLens 2 augmented reality application to remotely teleop multiple robotic arms. 
-Current Arms Supported:
+HoloLens 2 augmented reality application to remotely teleop robotic arms. 
+
+Currently Supported Arms:
 - ReThink Robotics Baxter Dual Arm
 - Kinova Robotics Gen3 7DOF Dual Arm Setup
 
-![Baxter in Augmented Reality](media/cover_photo.jpg? "Baxter in Augmented Reality")
+##### Note: This is an updated repo based on [GitHub - frank-Regal/baxter_ar_teleop](https://github.com/frank-Regal/baxter_ar_teleop.git 'https://github.com/frank-Regal/baxter_ar_teleop.git') with the intention to be a modular version that can support more robotic arms.
 
-This repo is for the Augmented Reality application only. The code needed to control Baxter on an Ubuntu machine can be found here: [GitHub - anlyoung/kaeri_teleop](https://github.com/anlyoung/kaeri_teleop 'https://github.com/anlyoung/kaeri_teleop')
+![Baxter in Augmented Reality](media/cover_photo.jpg? "Baxter in Augmented Reality")
 
 ### Branch Descriptions
 - ```main``` - stable build
@@ -21,7 +22,7 @@ This repo is for the Augmented Reality application only. The code needed to cont
 - [Windows 10 SDK v10.0.19041.0](https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/ 'https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/')
 
 ### Opening Project
-1. Clone this repo ```git clone --recursive https://github.com/frank-Regal/baxter_ar_teleop.git```
+1. Clone this repo ```git clone --recursive https://github.com/frank-Regal/augmented_reality_robot_control.git```
 2. Open Unity Hub and click "Add project from disk" from the drop down "Open" menu to find and select your cloned repo.
 3. Select 2020.3.35f1 from the drop down menu in the editor version column.
 4. Double click to open the project.
@@ -37,10 +38,17 @@ This repo is for the Augmented Reality application only. The code needed to cont
 3. Follow this tutorial to build for HoloLens 2: [Build and Deploy to the HoloLens](https://docs.microsoft.com/en-us/windows/mixed-reality/develop/unity/build-and-deploy-to-hololens 'https://docs.microsoft.com/en-us/windows/mixed-reality/develop/unity/build-and-deploy-to-hololens')
 4. Follow this tutorial to deploy to HoloLens 2: [Using Visual Studio to deploy and debug](https://docs.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-visual-studio?tabs=hl2 'https://docs.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-visual-studio?tabs=hl2')
 
+### Robotic Arm Setup
+- #### Baxter Dual Arm
+    - Setup Instructions [GitHub - anlyoung/kaeri_teleop](https://github.com/anlyoung/kaeri_teleop 'https://github.com/anlyoung/kaeri_teleop')
+
+- #### Kinova Gen3 7DOF Dual Arm
+    - Setup Instructions [GitHub - frank-Regal/kinova_ar_teleop](https://github.com/frank-Regal/kinova_ar_teleop 'https://github.com/frank-Regal/kinova_ar_teleop')
 
 ## Contributing
-### Development Notes
-The game is fully functional in simulation. Using the "Play" button at the top of the Unity editor you can enter into the same scene you would enter if you were opening the app on the HoloLens. A few notes for getting the same functionality in the Unity Editor simulator as you would in the HoloLens.
+### Experienced Unity Developers 
+#### Development Notes
+The application is fully functional in simulation. Using the "Play" button at the top of the Unity editor you can enter into the same scene you would enter if you were opening the app on the HoloLens. A few notes for getting the same functionality in the Unity Editor simulator as you would in the HoloLens.
 1. Make sure you are connected to the same network as the robot and your firewalls are not restricting communication between the robot and your machine.
 2. Make sure your ```Ros Connector (Script)``` settings are configured as follows control the robot from simulation
     - Under the *Serializer* dropdown menu ensure ```Newtonsoft_JSON``` is selected.
@@ -48,7 +56,8 @@ The game is fully functional in simulation. Using the "Play" button at the top o
     - Under *Ros Bridge Server Url* ensure that the IP address to your Ros Bridge Server is correctly written. As example you should have an IP address that looks similar to the following: ```ws://192.168.1.6:9090```
 3. Make sure you are famaliar with using the hand gestures in simulation. A tutorial on controlling MRTK hand gestures from within Unity can be found here: [Using Hands in Unity with MRTK](https://docs.microsoft.com/en-us/learn/modules/mixed-reality-toolkit-project-unity/7-exercise-hand-interaction-objectmanipulator 'https://docs.microsoft.com/en-us/learn/modules/mixed-reality-toolkit-project-unity/7-exercise-hand-interaction-objectmanipulator')
 
-### Learn How To Create This Project
+### Novice Unity Developers 
+#### Learn How To Create This Project from Scratch
 Tutorial on how to replicate this project on your own. Please request access if you are restricted access.
 
 - [Tutorial: Building Baxter AR Teloperation Application](https://docs.google.com/document/d/1IbUh4coWxempv4kRiAWMmxlxtNeg4E3t1pIcTP4Cmf0/edit?usp=sharing 'Building Basic Baxter AR Application')
