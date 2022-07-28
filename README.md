@@ -12,7 +12,7 @@ Currently Supported Arms:
 
 
 ### Branch Descriptions
-- ```devel``` - development branch. Working daily on this project, devel is not garenteed to build.
+- ```devel``` - main branch. Create a branch off this one to contribute.
 
 
 ## Getting Started
