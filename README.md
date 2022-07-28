@@ -48,6 +48,11 @@ Currently Supported Arms:
 
 - #### Kinova Gen3 7DOF Dual Arm
     - Setup Instructions [GitHub - frank-Regal/kinova_ar_teleop](https://github.com/frank-Regal/kinova_ar_teleop 'https://github.com/frank-Regal/kinova_ar_teleop')
+    
+### Running Application
+1. Run the robots launch files first from the setup steps you went through in the above step. This will ensure your RosBridge server Websocket connection is running.
+2. Navigate to the HoloLens application and launch.
+3. On start up screen, select the robot you want to control / have ready to be controlled.
 
 ## Contributing
 ### Experienced Unity Developers 
