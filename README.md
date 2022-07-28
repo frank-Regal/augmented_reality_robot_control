@@ -14,6 +14,10 @@ Currently Supported Arms:
 ### Branch Descriptions
 - ```devel``` - main branch. Create a branch off this one to contribute.
 
+### System Overview
+<img src="media/ar_overview.png" alt="drawing" width="650"/>
+
+##### Figure 1: showing an example of how this Unity Application fits into the overall system to control robots. This flow chart is for the Kinova robots, but a similar flow chart is used for the baxter robot.
 
 ## Getting Started
 ### Tested Versions
