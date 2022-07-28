@@ -1,6 +1,6 @@
 # Augmented Reality Robot Control
 ### About
-HoloLens 2 augmented reality application to remotely teleop robotic arms. 
+HoloLens 2 augmented reality application used to enable users to remotely teleop robotic arms. This is a Unity Application.
 
 Currently Supported Arms:
 - ReThink Robotics Baxter Dual Arm
