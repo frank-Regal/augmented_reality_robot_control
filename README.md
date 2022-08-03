@@ -1,6 +1,6 @@
 # Augmented Reality Robot Control
 ### About
-HoloLens 2 augmented reality application to remotely teleop robotic arms. 
+HoloLens 2 augmented reality application used to enable users to remotely teleop robotic arms. This is a Unity Application.
 
 Currently Supported Arms:
 - ReThink Robotics Baxter Dual Arm
@@ -8,12 +8,16 @@ Currently Supported Arms:
 
 ##### Note: This is an updated repo based on [GitHub - frank-Regal/baxter_ar_teleop](https://github.com/frank-Regal/baxter_ar_teleop.git 'https://github.com/frank-Regal/baxter_ar_teleop.git') with the intention to be a modular version that can support more robotic arms.
 
-<img src="media/cover_photo.jpg" alt="drawing" width="700"/>
+<img src="media/kinova_ar_teleop.png" alt="drawing" width="500"/> <img src="media/cover_photo.jpg" alt="drawing" width="500"/>
+
 
 ### Branch Descriptions
-- ```main``` - stable build
-- ```devel``` - development branch. Working daily on this project, devel is not garenteed to build.
+- ```devel``` - main branch. Create a branch off this one to contribute.
 
+### System Overview
+<img src="media/ar_overview.png" alt="drawing" width="650"/>
+
+##### Figure 1: showing an example of how this Unity Application fits into the overall system to control robots. This flow chart is for the Kinova robots, but a similar flow chart is used for the baxter robot.
 
 ## Getting Started
 ### Tested Versions
@@ -44,6 +48,11 @@ Currently Supported Arms:
 
 - #### Kinova Gen3 7DOF Dual Arm
     - Setup Instructions [GitHub - frank-Regal/kinova_ar_teleop](https://github.com/frank-Regal/kinova_ar_teleop 'https://github.com/frank-Regal/kinova_ar_teleop')
+    
+### Running Application
+1. Run the robots launch files first from the setup steps you went through in the above step. This will ensure your RosBridge server Websocket connection is running.
+2. Navigate to the HoloLens application and launch.
+3. On start up screen, select the robot you want to control / have ready to be controlled.
 
 ## Contributing
 ### Experienced Unity Developers 
