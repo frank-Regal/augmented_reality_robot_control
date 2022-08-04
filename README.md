@@ -23,6 +23,13 @@ Currently Supported Arms:
 ### Tested Versions
 - [Unity 2020.3.35f1](https://unity3d.com/get-unity/download 'https://unity3d.com/get-unity/download')
 - [Visual Studio Community 2019 v16.8.3](https://visualstudio.microsoft.com/downloads/ 'https://visualstudio.microsoft.com/downloads/')
+    - Ensure the following items are selected in the Visual Studio Installer:
+        - .NET desktop development
+        - Desktop development with C++
+        - Windows Platform development
+        - Game development with Unity
+        - Geme development with C++
+        
 - [Windows 10 SDK v10.0.19041.0](https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/ 'https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/')
 
 ### Download and Open Unity App
