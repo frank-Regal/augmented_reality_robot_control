@@ -26,7 +26,7 @@ Currently Supported Arms:
 - [Windows 10 SDK v10.0.19041.0](https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/ 'https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/')
 
 ### Opening Project
-1. Clone this repo ```git clone --recursive https://github.com/frank-Regal/augmented_reality_robot_control.git```
+1. Download the zip file of this repo or clone it to your computer```git clone --recursive https://github.com/frank-Regal/augmented_reality_robot_control.git```
 2. Open Unity Hub and click "Add project from disk" from the drop down "Open" menu to find and select your cloned repo.
 3. Select 2020.3.35f1 from the drop down menu in the editor version column.
 4. Double click to open the project.
